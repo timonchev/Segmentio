@@ -10,7 +10,7 @@ import UIKit
 
 class SegmentioCell: UICollectionViewCell {
     
-    let padding: CGFloat = 8
+    let padding: CGFloat = 0
     static let segmentTitleLabelHeight: CGFloat = 22
     
     var verticalSeparatorView: UIView?
@@ -247,7 +247,7 @@ class SegmentioCell: UICollectionViewCell {
                 toItem: imageContainerView,
                 attribute: .leading,
                 multiplier: 1,
-                constant: 0
+                constant: -8
         )
         
         let segmentImageViewTrailingConstraint =
@@ -258,7 +258,7 @@ class SegmentioCell: UICollectionViewCell {
                 toItem: imageContainerView,
                 attribute: .trailing,
                 multiplier: 1,
-                constant: 0
+                constant: 8
         )
         
         let segmentImageViewBottomConstraint =
@@ -269,7 +269,7 @@ class SegmentioCell: UICollectionViewCell {
                 toItem: imageContainerView,
                 attribute: .bottom,
                 multiplier: 1,
-                constant: 0
+                constant: 30
         )
         addConstraints([
             segmentImageViewBottomConstraint,
